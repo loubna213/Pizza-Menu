@@ -1,21 +1,14 @@
-import pizzaData from './data'
 
-const Pizza = () => {
 
-    const pizzaElements = pizzaData.map((pizza, index) => (
-        <li key={index} className="pizza">
-            <img src={pizza.photoName} alt="piza photo" />
-            <h1>{pizza.name}</h1>
-            <p>{pizza.ingredients}</p>
-            <p>${pizza.price}</p>
-            <p>{pizza.soldOut}</p>
-        </li>
-    ))
-
+const Pizza = ({photoName, name, ingredients, price, soldOut}) => {
     return (
-        <>
-            {pizzaElements}
-        </>
+        <li className="pizza">
+            <img src={photoName} alt={name} />
+            <h1>{name}</h1>
+            <p>{ingredients}</p>
+            <p>${price}</p>
+            <p>{soldOut}</p>
+        </li>
     )
 }
 
