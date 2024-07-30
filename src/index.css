@@ -118,7 +118,7 @@ body {
   font-size: 1.4rem;
   font-weight: 300;
   font-style: italic;
-  margin-bottom: auto;
+  margin-bottom: 5px;
 }
 .pizza span {
   display: block;

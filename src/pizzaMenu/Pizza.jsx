@@ -2,12 +2,13 @@
 
 const Pizza = ({photoName, name, ingredients, price, soldOut}) => {
     return (
-        <li className="pizza">
+        <li className={`pizza ${soldOut ? 'sold-out' : null}`}>
             <img src={photoName} alt={name} />
-            <h1>{name}</h1>
-            <p>{ingredients}</p>
-            <p>${price}</p>
-            <p>{soldOut}</p>
+            <div>
+                <h1>{name}</h1>
+                <p>{ingredients}</p>
+                <span>{soldOut ? 'SOLD OUT' : '$' + price}</span>
+            </div>
         </li>
     )
 }
